@@ -58,6 +58,9 @@ namespace Game
             {
                 Target = null;
             }
+
+            if (!player.control)
+                Target = null;
         }
 	}
 }

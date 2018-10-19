@@ -45,6 +45,9 @@ namespace Game
                 y = Input.GetAxisRaw("Vertical")
             };
 
+            if (!player.control)
+                input = Vector2.zero;
+
             var velocity = rigidbody.velocity;
             velocity.y = 0f;
 
@@ -69,6 +72,9 @@ namespace Game
                 x = Input.GetAxis("Mouse X"),
                 y = Input.GetAxis("Mouse Y")
             };
+
+            if (!player.control)
+                input = Vector2.zero;
 
             player.transform.Rotate(Vector3.up, input.x * sensitivity);
             camera.transform.Rotate(Vector3.right, -input.y * sensitivity);

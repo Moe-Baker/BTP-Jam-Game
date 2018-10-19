@@ -21,10 +21,13 @@ namespace Game
 {
 	public class Player : MonoBehaviour
 	{
+        public bool control = true;
+
         new public Rigidbody rigidbody { get; private set; }
         new public CapsuleCollider collider { get; private set; }
 
         new public Camera camera { get; private set; }
+        public CameraTransition CameraTransition { get; private set; }
 
         public PlayerEnergy Energy { get; protected set; }
         public PlayerController Controller { get; protected set; }
@@ -36,6 +39,7 @@ namespace Game
             collider = GetComponentInChildren<CapsuleCollider>();
 
             camera = GetComponentInChildren<Camera>();
+            CameraTransition = GetComponentInChildren<CameraTransition>();
 
             Energy = GetComponentInChildren<PlayerEnergy>();
             Energy.Init(this);
