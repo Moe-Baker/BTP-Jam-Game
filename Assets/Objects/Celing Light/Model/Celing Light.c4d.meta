@@ -1,52 +1,28 @@
 fileFormatVersion: 2
-guid: 3897d1cffa0bfba46837849173a1a870
+guid: 17ab85dc46f1efa458fdb1c72302d7b3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Floor
-    100002: Floor_2
-    100004: Roof
-    100006: //RootNode
-    100008: Walls
-    100010: Window
-    100012: Window_2
-    100014: Windows
-    400000: Floor
-    400002: Floor_2
-    400004: Roof
-    400006: //RootNode
-    400008: Walls
-    400010: Window
-    400012: Window_2
-    400014: Windows
-    2100000: Room
-    2100002: Glass
-    2300000: Floor
-    2300002: Floor_2
-    2300004: Walls
-    2300006: Window
-    2300008: Window_2
-    3300000: Floor
-    3300002: Floor_2
-    3300004: Walls
-    3300006: Window
-    3300008: Window_2
-    4300000: Walls
-    4300002: Floor
-    4300004: Floor_2
-    4300006: Window
-    4300008: Window_2
-    6400000: Floor
-    6400002: Floor_2
-    6400004: Walls
-    6400006: Window
-    6400008: Window_2
+    100000: //RootNode
+    100002: Frame
+    100004: Light
+    400000: //RootNode
+    400002: Frame
+    400004: Light
+    2100000: Celing Light
+    2100002: Light
+    2300000: Frame
+    2300002: Light
+    3300000: Frame
+    3300002: Light
+    4300000: Frame
+    4300002: Light
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: f567dd3d4c1f756469577a52182c3aa0, type: 2}
+      name: Light
+    second: {fileID: 2100000, guid: 0d51f25f0d2ee8148a7b152903fefce4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -79,7 +55,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
