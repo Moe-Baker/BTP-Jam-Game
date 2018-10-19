@@ -784,8 +784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22.34}
-  m_SizeDelta: {x: 0, y: -44.68}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702789498
 MonoBehaviour:
@@ -806,7 +806,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 63031ac4293944719946e077c75b255a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7dbb0e62a8ba6743832615f7736124a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -982,7 +982,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 63031ac4293944719946e077c75b255a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7dbb0e62a8ba6743832615f7736124a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1089,24 +1089,64 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1165732811
-Animator:
-  serializedVersion: 3
+--- !u!114 &1165732811
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165732809}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f966d7d17ea5fb349b7130dfda874c72, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd0668218d378a4389cc9cc9c6b8eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.45
+  range: 1
+  eyelids:
+  - {fileID: 973901633}
+  - {fileID: 702789498}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.32737443
+      outSlope: 0.32737443
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.26427296
+    - serializedVersion: 3
+      time: 0.26803008
+      value: 0.05042222
+      inSlope: 0.4172131
+      outSlope: 0.4172131
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.24554338
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.71281874
+      value: 0.9412173
+      inSlope: 0.34762737
+      outSlope: 0.34762737
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13409671
+    - serializedVersion: 3
+      time: 0.99890137
+      value: 0.868042
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
 --- !u!1 &1361995113
 GameObject:
   m_ObjectHideFlags: 0
