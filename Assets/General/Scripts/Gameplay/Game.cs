@@ -21,7 +21,7 @@ namespace Game
 {
 	public class Game : MonoBehaviour
 	{
-        [Range(0f, 1f)]
+        [Range(0f, MaxProgress)]
         public float _progress = 0f;
         public float Progress
         {
@@ -31,8 +31,67 @@ namespace Game
             }
             set
             {
-                _progress = Mathf.Clamp01(value);
+                _progress = Mathf.Clamp(value, 0f, MaxProgress);
             }
+        }
+        public event Action<float> OnProgressChange;
+
+        public const float MaxProgress = 100f;
+
+        public float ProgressRate { get { return Progress / MaxProgress; } }
+
+        public Timer timer;
+
+        Player player;
+
+        void Start()
+        {
+            player = FindObjectOfType<Player>();
+
+            Begin();
+        }
+
+        public void Begin()
+        {
+            timer.Begin();
+
+            StartCoroutine(Procedure());
+        }
+
+        protected virtual IEnumerator Procedure()
+        {
+            while(true)
+            {
+                if (Progress == MaxProgress)
+                {
+                    Win();
+                    break;
+                }
+
+                if (timer.IsComplete)
+                {
+                    Lose();
+                    break;
+                }
+
+                if (Mathf.Approximately(player.Energy.Rate, 0f))
+                {
+                    Lose();
+                    break;
+                }
+
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+        void Win()
+        {
+            Debug.Log("Game Won");
+        }
+
+        void Lose()
+        {
+            Debug.Log("Game Lost");
         }
     }
 }

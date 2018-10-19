@@ -19,25 +19,20 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class GameProgressUI : MonoBehaviour
+	public class ExecuteOperationInteraction : Interaction
 	{
-        public Slider slider;
-        public Text label;
+        public GameObject target;
 
-        Game game;
-
-        void Start()
+        void Reset()
         {
-            game = FindObjectOfType<Game>();
-
-            slider.minValue = 0f;
-            slider.maxValue = Game.MaxProgress;
+            target = gameObject;
         }
 
-        void Update()
+        protected override void Action()
         {
-            slider.value = game.Progress;
-            label.text = "Game Progress: " + ((int)game.Progress).ToString() + "%";
+            base.Action();
+
+            Operation.Execute(gameObject);
         }
     }
 }

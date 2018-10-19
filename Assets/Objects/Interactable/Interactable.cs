@@ -29,5 +29,19 @@ namespace Game
         {
             if (OnInteraction != null) OnInteraction();
         }
-	}
+    }
+
+    [RequireComponent(typeof(Interactable))]
+    public abstract class Interaction : MonoBehaviour
+    {
+        void Start()
+        {
+            GetComponent<Interactable>().OnInteraction += Action;
+        }
+
+        protected virtual void Action()
+        {
+            
+        }
+    }
 }

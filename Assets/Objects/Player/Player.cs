@@ -26,6 +26,7 @@ namespace Game
 
         new public Camera camera { get; private set; }
 
+        public PlayerEnergy Energy { get; protected set; }
         public PlayerController Controller { get; protected set; }
         public PlayerInteract Interact { get; protected set; }
 
@@ -35,6 +36,9 @@ namespace Game
             collider = GetComponentInChildren<CapsuleCollider>();
 
             camera = GetComponentInChildren<Camera>();
+
+            Energy = GetComponentInChildren<PlayerEnergy>();
+            Energy.Init(this);
 
             Controller = GetComponentInChildren<PlayerController>();
             Controller.Init(this);
@@ -48,6 +52,8 @@ namespace Game
             Controller.Process();
 
             Interact.Process();
+
+            Energy.Process();
         }
 	}
 }

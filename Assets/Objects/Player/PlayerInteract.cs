@@ -41,7 +41,7 @@ namespace Game
         {
             Detect();
 
-            if (Target != null && Input.GetButton("Interact"))
+            if (Target != null && Input.GetButtonDown("Interact"))
                 Target.Interact();
         }
 
