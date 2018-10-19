@@ -21,6 +21,8 @@ namespace Game
 {
 	public class Interactable : MonoBehaviour
 	{
+        public string text = "Interact";
+
         public event Action OnInteraction;
 
 		public void Interact()
