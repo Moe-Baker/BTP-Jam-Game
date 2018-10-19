@@ -1,4 +1,10 @@
 {
-	"dependencies": {
-	}
+  "dependencies": {
+    "com.unity.ads": "exclude",
+    "com.unity.analytics": "exclude",
+    "com.unity.standardevents": "exclude",
+    "com.unity.purchasing": "exclude",
+    "com.unity.textmeshpro": "exclude",
+    "com.unity.postprocessing": "0.1.8"
+  }
 }

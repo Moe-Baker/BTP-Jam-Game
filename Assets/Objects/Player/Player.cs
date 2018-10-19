@@ -27,6 +27,7 @@ namespace Game
         new public Camera camera { get; private set; }
 
         public PlayerController Controller { get; protected set; }
+        public PlayerInteract Interact { get; protected set; }
 
         void Awake()
         {
@@ -37,11 +38,16 @@ namespace Game
 
             Controller = GetComponentInChildren<PlayerController>();
             Controller.Init(this);
+
+            Interact = GetComponentInChildren<PlayerInteract>();
+            Interact.Init(this);
         }
 
         void Update()
         {
             Controller.Process();
+
+            Interact.Process();
         }
 	}
 }
