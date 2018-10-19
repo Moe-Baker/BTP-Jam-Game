@@ -44,6 +44,15 @@ namespace Game
 
         Player player;
 
+        GameState state = GameState.Idle;
+        public event Action<GameState> OnStateChange;
+        void ChangeState(GameState newState)
+        {
+            state = newState;
+
+            if (OnStateChange != null) OnStateChange(state);
+        }
+
         void Start()
         {
             player = FindObjectOfType<Player>();
@@ -53,6 +62,8 @@ namespace Game
 
         public void Begin()
         {
+            ChangeState(GameState.Playing);
+
             timer.Begin();
 
             StartCoroutine(Procedure());
@@ -86,12 +97,21 @@ namespace Game
 
         void Win()
         {
+            ChangeState(GameState.Ended);
+
             Debug.Log("Game Won");
         }
 
         void Lose()
         {
+            ChangeState(GameState.Ended);
+
             Debug.Log("Game Lost");
         }
+    }
+
+    public enum GameState
+    {
+        Idle, Playing, Ended
     }
 }

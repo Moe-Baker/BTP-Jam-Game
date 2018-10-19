@@ -25,6 +25,8 @@ namespace Game
 
         public event Action OnInteraction;
 
+        public bool active = true;
+
 		public void Interact()
         {
             if (OnInteraction != null) OnInteraction();

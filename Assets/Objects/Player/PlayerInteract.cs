@@ -50,6 +50,9 @@ namespace Game
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out raycastHit, range, mask))
             {
                 Target = raycastHit.transform.GetComponent<Interactable>();
+
+                if (Target != null && !Target.active)
+                    Target = null;
             }
             else
             {
