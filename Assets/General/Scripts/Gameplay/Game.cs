@@ -95,16 +95,22 @@ namespace Game
             }
         }
 
+        public GameObject winMenu;
         void Win()
         {
             ChangeState(GameState.Ended);
 
+            winMenu.SetActive(true);
+
             Debug.Log("Game Won");
         }
 
+        public GameObject loseMenu;
         void Lose()
         {
             ChangeState(GameState.Ended);
+
+            loseMenu.SetActive(true);
 
             Debug.Log("Game Lost");
         }
