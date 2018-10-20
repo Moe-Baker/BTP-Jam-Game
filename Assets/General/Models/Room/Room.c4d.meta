@@ -11,6 +11,40 @@ ModelImporter:
     100010: Window
     100012: Window_2
     100014: Windows
+    100016: books
+    100018: ceiling
+    100020: chair101
+    100022: chair201
+    100024: chair3
+    100026: chair401
+    100028: chair5
+    100030: coffee_machine06
+    100032: cupboard03
+    100034: curtains
+    100036: Desk
+    100038: door01
+    100040: floor
+    100042: keyboard01
+    100044: lamp
+    100046: laptop102
+    100048: laptop201
+    100050: laptop3
+    100052: laptop4
+    100054: mug01
+    100056: painting
+    100058: screen
+    100060: shelf01
+    100062: sugar
+    100064: table1
+    100066: table2
+    100068: tray
+    100070: wall01
+    100072: wall02
+    100074: wall03
+    100076: wall04
+    100078: window1
+    100080: window2
+    100082: window3
     400000: Floor
     400002: Floor_2
     400004: Roof
@@ -19,28 +53,216 @@ ModelImporter:
     400010: Window
     400012: Window_2
     400014: Windows
+    400016: books
+    400018: ceiling
+    400020: chair101
+    400022: chair201
+    400024: chair3
+    400026: chair401
+    400028: chair5
+    400030: coffee_machine06
+    400032: cupboard03
+    400034: curtains
+    400036: Desk
+    400038: door01
+    400040: floor
+    400042: keyboard01
+    400044: lamp
+    400046: laptop102
+    400048: laptop201
+    400050: laptop3
+    400052: laptop4
+    400054: mug01
+    400056: painting
+    400058: screen
+    400060: shelf01
+    400062: sugar
+    400064: table1
+    400066: table2
+    400068: tray
+    400070: wall01
+    400072: wall02
+    400074: wall03
+    400076: wall04
+    400078: window1
+    400080: window2
+    400082: window3
     2100000: Room
     2100002: Glass
+    2100004: Paint - Sienna S
+    2100006: Leather - Tabac
+    2100008: Metal - Aluminiu
+    2100010: Paint - Dark Gra
+    2100012: Paint - Glossy W
+    2100014: Paint - Titanium
+    2100016: Paint - Cadmium_
+    2100018: Paint - Pale Blu
+    2100020: Paint - Lead Oxi
+    2100022: Paint - Light Gr
+    2100024: Floorboards - 01
+    2100026: Wood - Walnut Ho
+    2100028: Glass - Blue
+    2100030: Glass - Clear Fa
+    2100032: Paint - Cobalt B
+    2100034: Paint - Forest G
+    2100036: Paint - Royal Bl
+    2100038: Paint - Golden O
     2300000: Floor
     2300002: Floor_2
     2300004: Walls
     2300006: Window
     2300008: Window_2
+    2300010: books
+    2300012: ceiling
+    2300014: chair101
+    2300016: chair201
+    2300018: chair3
+    2300020: chair401
+    2300022: chair5
+    2300024: coffee_machine06
+    2300026: cupboard03
+    2300028: curtains
+    2300030: Desk
+    2300032: door01
+    2300034: floor
+    2300036: keyboard01
+    2300038: lamp
+    2300040: laptop102
+    2300042: laptop201
+    2300044: laptop3
+    2300046: laptop4
+    2300048: mug01
+    2300050: painting
+    2300052: screen
+    2300054: shelf01
+    2300056: sugar
+    2300058: table1
+    2300060: table2
+    2300062: tray
+    2300064: wall01
+    2300066: wall02
+    2300068: wall03
+    2300070: wall04
+    2300072: window1
+    2300074: window2
+    2300076: window3
     3300000: Floor
     3300002: Floor_2
     3300004: Walls
     3300006: Window
     3300008: Window_2
+    3300010: books
+    3300012: ceiling
+    3300014: chair101
+    3300016: chair201
+    3300018: chair3
+    3300020: chair401
+    3300022: chair5
+    3300024: coffee_machine06
+    3300026: cupboard03
+    3300028: curtains
+    3300030: Desk
+    3300032: door01
+    3300034: floor
+    3300036: keyboard01
+    3300038: lamp
+    3300040: laptop102
+    3300042: laptop201
+    3300044: laptop3
+    3300046: laptop4
+    3300048: mug01
+    3300050: painting
+    3300052: screen
+    3300054: shelf01
+    3300056: sugar
+    3300058: table1
+    3300060: table2
+    3300062: tray
+    3300064: wall01
+    3300066: wall02
+    3300068: wall03
+    3300070: wall04
+    3300072: window1
+    3300074: window2
+    3300076: window3
     4300000: Walls
     4300002: Floor
     4300004: Floor_2
     4300006: Window
     4300008: Window_2
+    4300010: Desk
+    4300012: table1
+    4300014: chair101
+    4300016: chair201
+    4300018: chair401
+    4300020: chair3
+    4300022: chair5
+    4300024: laptop201
+    4300026: laptop102
+    4300028: laptop3
+    4300030: laptop4
+    4300032: keyboard01
+    4300034: screen
+    4300036: table2
+    4300038: coffee_machine06
+    4300040: tray
+    4300042: sugar
+    4300044: floor
+    4300046: wall02
+    4300048: wall04
+    4300050: wall01
+    4300052: window1
+    4300054: window2
+    4300056: cupboard03
+    4300058: shelf01
+    4300060: window3
+    4300062: curtains
+    4300064: books
+    4300066: lamp
+    4300068: painting
+    4300070: mug01
+    4300072: ceiling
+    4300074: wall03
+    4300076: door01
     6400000: Floor
     6400002: Floor_2
     6400004: Walls
     6400006: Window
     6400008: Window_2
+    6400010: books
+    6400012: ceiling
+    6400014: chair101
+    6400016: chair201
+    6400018: chair3
+    6400020: chair401
+    6400022: chair5
+    6400024: coffee_machine06
+    6400026: cupboard03
+    6400028: curtains
+    6400030: Desk
+    6400032: door01
+    6400034: floor
+    6400036: keyboard01
+    6400038: lamp
+    6400040: laptop102
+    6400042: laptop201
+    6400044: laptop3
+    6400046: laptop4
+    6400048: mug01
+    6400050: painting
+    6400052: screen
+    6400054: shelf01
+    6400056: sugar
+    6400058: table1
+    6400060: table2
+    6400062: tray
+    6400064: wall01
+    6400066: wall02
+    6400068: wall03
+    6400070: wall04
+    6400072: window1
+    6400074: window2
+    6400076: window3
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -96,7 +318,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:

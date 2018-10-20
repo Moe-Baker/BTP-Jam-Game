@@ -45,10 +45,13 @@ namespace Game
         Player player;
 
         GameState state = GameState.Idle;
+        public GameState State { get { return state; } }
         public event Action<GameState> OnStateChange;
         void ChangeState(GameState newState)
         {
             state = newState;
+
+            player.control = state == GameState.Playing;
 
             if (OnStateChange != null) OnStateChange(state);
         }
@@ -56,8 +59,7 @@ namespace Game
         void Start()
         {
             player = FindObjectOfType<Player>();
-
-            Begin();
+            player.control = false;
         }
 
         public void Begin()
@@ -65,6 +67,7 @@ namespace Game
             ChangeState(GameState.Playing);
 
             timer.Begin();
+            player.CameraTransition.Do();
 
             StartCoroutine(Procedure());
         }
@@ -101,8 +104,6 @@ namespace Game
             ChangeState(GameState.Ended);
 
             winMenu.SetActive(true);
-
-            Debug.Log("Game Won");
         }
 
         public GameObject loseMenu;
@@ -111,8 +112,6 @@ namespace Game
             ChangeState(GameState.Ended);
 
             loseMenu.SetActive(true);
-
-            Debug.Log("Game Lost");
         }
     }
 

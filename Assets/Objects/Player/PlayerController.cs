@@ -53,8 +53,9 @@ namespace Game
 
             var targetDirection = (transform.forward * input.y) + (transform.right * input.x);
             var targetVelocity = Vector3.ClampMagnitude(targetDirection * speed, speed);
+            targetVelocity *= player.Energy.Rate;
 
-            velocity = Vector3.MoveTowards(velocity, targetVelocity, acceleration * Time.deltaTime);
+            velocity = Vector3.MoveTowards(velocity, targetVelocity, acceleration * player.Energy.Rate * Time.deltaTime);
 
             velocity.y = rigidbody.velocity.y;
 
@@ -76,8 +77,8 @@ namespace Game
             if (!player.control)
                 input = Vector2.zero;
 
-            player.transform.Rotate(Vector3.up, input.x * sensitivity);
-            camera.transform.Rotate(Vector3.right, -input.y * sensitivity);
+            player.transform.Rotate(Vector3.up, input.x * sensitivity * player.Energy.Rate);
+            camera.transform.Rotate(Vector3.right, -input.y * sensitivity * player.Energy.Rate);
         }
 	}
 }

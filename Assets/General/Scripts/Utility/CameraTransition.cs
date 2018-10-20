@@ -25,6 +25,14 @@ namespace Game
 
         public float speed = 5f;
 
+        public bool autoPlay = false;
+
+        void Start()
+        {
+            if (autoPlay)
+                Do();
+        }
+
         public void Do()
         {
             coroutine = StartCoroutine(Procedure());

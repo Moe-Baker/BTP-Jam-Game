@@ -46,7 +46,7 @@ namespace Game
 
             var color = target.color;
 
-            color.a = value;
+            color.a = Mathf.Clamp01(value * 2);
 
             target.color = color;
         }

@@ -47,13 +47,18 @@ namespace Game
             this.player = player;
 
             blink = FindObjectOfType<Blink>();
+
+            game = FindObjectOfType<Game>();
         }
+
+        Game game;
 
         Blink blink;
 
         public void Process()
         {
-            value = Mathf.MoveTowards(value, 0f, depletionSpeed * Time.deltaTime);
+            if(game.State == GameState.Playing)
+                value = Mathf.MoveTowards(value, 0f, depletionSpeed * Time.deltaTime);
 
             blink.range = Mathf.InverseLerp(maxValue, 0f, value);
         }

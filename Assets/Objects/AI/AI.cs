@@ -31,6 +31,8 @@ namespace Game
 
         public Interactable interactable;
 
+        public ParticleSystem sleepParticles;
+
         void Awake()
         {
             FindObjectOfType<Game>().OnStateChange += OnGameStateChange;
@@ -69,6 +71,10 @@ namespace Game
                     state = AIState.Sleeping;
 
                 interactable.active = state == AIState.Sleeping;
+                sleepParticles.enableEmission = state == AIState.Sleeping;
+
+                if (!interactable.active)
+                    sleepParticles.Clear();
 
                 yield return new WaitForEndOfFrame();
             }
