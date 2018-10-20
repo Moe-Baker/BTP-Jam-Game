@@ -269,6 +269,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: f567dd3d4c1f756469577a52182c3aa0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass - Blue
+    second: {fileID: 2100000, guid: f567dd3d4c1f756469577a52182c3aa0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
