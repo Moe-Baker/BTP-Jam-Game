@@ -34,8 +34,10 @@ namespace Game
         {
             text.text = "Instructions:" +
 "\n- Drink Coffee" +
-"\n- Keep Your Team Awake" +
-"\n- Finish Your Game In: " + Math.Round(game.timer.target - game.timer.current, 1) + "s";
+"\n- Keep Your Team Awake." +
+"\n- Finish Your Game In: " + Math.Round(game.timer.target - game.timer.current, 1) + "s." +
+"\n- Approve Any Merge Requests." +
+"\n- Upload Your Game When Finished.";
         }
 	}
 }
