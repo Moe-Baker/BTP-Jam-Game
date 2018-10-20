@@ -23,9 +23,26 @@ namespace Game
 	{
         public CameraTransition transition;
 
+        public Button mergeButton;
+
+        public Button uploadButton;
+
+        Game game;
+
         void Start()
         {
+            game = FindObjectOfType<Game>();
+
             GetComponent<Interactable>().OnInteraction += OnInteract;
+
+            mergeButton.onClick.AddListener(game.RemoveMergeRequest);
+            uploadButton.onClick.AddListener(game.Upload);
+        }
+
+        void Update()
+        {
+            mergeButton.gameObject.SetActive(game.MergeRequest);
+            uploadButton.gameObject.SetActive(game.ProgressRate == 1f);
         }
 
         void OnInteract()

@@ -31,7 +31,15 @@ namespace Game
             }
             set
             {
-                _progress = Mathf.Clamp(value, 0f, MaxProgress);
+                if (mergeRequest) return;
+
+                value = Mathf.Clamp(value, 0f, MaxProgress);
+
+                if (_progress < 30 && value >= 30) mergeRequest = true;
+                if (_progress < 60 && value >= 60) mergeRequest = true;
+                if (_progress < 90 && value >= 90) mergeRequest = true;
+
+                _progress = value;
             }
         }
         public event Action<float> OnProgressChange;
@@ -39,6 +47,23 @@ namespace Game
         public const float MaxProgress = 100f;
 
         public float ProgressRate { get { return Progress / MaxProgress; } }
+
+        bool mergeRequest = false;
+        public bool MergeRequest { get { return mergeRequest; } }
+        public void AddMergeRequest()
+        {
+            mergeRequest = true;
+        }
+        public void RemoveMergeRequest()
+        {
+            mergeRequest = false;
+        }
+
+        bool uploaded = false;
+        public void Upload()
+        {
+            uploaded = true;
+        }
 
         public Timer timer;
 
@@ -79,7 +104,7 @@ namespace Game
         {
             while(true)
             {
-                if (Progress == MaxProgress)
+                if (Progress == MaxProgress && uploaded)
                 {
                     Win();
                     break;

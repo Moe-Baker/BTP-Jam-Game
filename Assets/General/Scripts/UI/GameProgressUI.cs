@@ -34,10 +34,27 @@ namespace Game
             slider.maxValue = Game.MaxProgress;
         }
 
+        public Color uploadColor = Color.green;
+        public Color mergeColor = Color.red;
         void Update()
         {
             slider.value = game.Progress;
-            label.text = "Game Progress: " + ((int)game.Progress).ToString() + "%";
+
+            if(game.ProgressRate == 1f)
+            {
+                label.color = uploadColor;
+                label.text = "Developement Complete, Upload The Game From Your PC";
+            }
+            else if(game.MergeRequest)
+            {
+                label.color = mergeColor;
+                label.text = "Merge Request Recieved, Please Approve From Your PC";
+            }
+            else
+            {
+                label.color = Color.grey;
+                label.text = "Game Progress: " + ((int)game.Progress).ToString() + "%";
+            }
         }
     }
 }
