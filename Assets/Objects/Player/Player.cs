@@ -59,5 +59,15 @@ namespace Game
 
             Energy.Process();
         }
+
+        public static void SetCursor(bool active)
+        {
+            Cursor.visible = active;
+
+            if (active)
+                Cursor.lockState = CursorLockMode.None;
+            else
+                Cursor.lockState = CursorLockMode.Locked;
+        }
 	}
 }

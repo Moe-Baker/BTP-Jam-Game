@@ -33,6 +33,7 @@ namespace Game
             FindObjectOfType<Player>().control = false;
 
             transition.Do();
+            Player.SetCursor(true);
         }
 
         public void Exit()
@@ -44,6 +45,7 @@ namespace Game
             var player = FindObjectOfType<Player>();
 
             player.CameraTransition.Do();
+            Player.SetCursor(false);
 
             while (player.CameraTransition.IsRunning)
                 yield return new WaitForEndOfFrame();

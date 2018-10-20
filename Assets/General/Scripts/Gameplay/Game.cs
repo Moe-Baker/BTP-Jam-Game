@@ -60,6 +60,8 @@ namespace Game
         {
             player = FindObjectOfType<Player>();
             player.control = false;
+
+            Player.SetCursor(true);
         }
 
         public void Begin()
@@ -68,6 +70,7 @@ namespace Game
 
             timer.Begin();
             player.CameraTransition.Do();
+            Player.SetCursor(false);
 
             StartCoroutine(Procedure());
         }
@@ -103,6 +106,8 @@ namespace Game
         {
             ChangeState(GameState.Ended);
 
+            Player.SetCursor(true);
+
             winMenu.SetActive(true);
         }
 
@@ -110,6 +115,7 @@ namespace Game
         void Lose()
         {
             ChangeState(GameState.Ended);
+            Player.SetCursor(true);
 
             loseMenu.SetActive(true);
         }
