@@ -29,15 +29,20 @@ namespace Game
 
         public int sleepChance = 10;
 
-        public Interactable interactable;
+        Interactable interactable;
 
         public ParticleSystem sleepParticles;
+
+        Animator animator;
 
         void Awake()
         {
             FindObjectOfType<Game>().OnStateChange += OnGameStateChange;
 
+            interactable = GetComponent<Interactable>();
             interactable.OnInteraction += OnInteraction;
+
+            animator = GetComponentInChildren<Animator>();
         }
 
         void OnGameStateChange(GameState gameState)
@@ -67,8 +72,11 @@ namespace Game
                     timer = 0f;
                 }
 
-                if (Random.Range(0, sleepChance) == 0)
+                if (state == AIState.Working && Random.Range(0, sleepChance) == 0)
+                {
                     state = AIState.Sleeping;
+                    animator.SetTrigger("Sleep");
+                }
 
                 interactable.active = state == AIState.Sleeping;
                 sleepParticles.enableEmission = state == AIState.Sleeping;
@@ -85,6 +93,7 @@ namespace Game
             if(state == AIState.Sleeping)
             {
                 state = AIState.Working;
+                animator.SetBool("Wake Up", state == AIState.Working);
             }
         }
     }
